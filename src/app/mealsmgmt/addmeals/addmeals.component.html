@@ -1,0 +1,36 @@
+<div class="magin">
+        <h1> Add a New Meal</h1>
+        <br>
+        <form [formGroup]="mealsForm" (ngSubmit)="addRestaurant()">
+                <div><span>Meal Type: </span>
+                        <div class="btn-group me-3">
+                                <div class="btn-group" ngbDropdown role="group"
+                                        aria-label="Button group with nested dropdown">
+                                        <button type="button" class="btn btn-outline-danger" name="meal_type" formControlName="meal_type" ngbDropdownToggle>Select
+                                                me</button>
+                                        <div class="dropdown-menu" ngbDropdownMenu>
+                                                <button  ngbDropdownItem>Veg</button>
+                                                <button  ngbDropdownItem>Non-Veg</button>
+                                        </div>
+                                </div>
+                        </div><span appErrorRed *ngIf="meal_type && meal_type.invalid && meal_type.touched ">Meal Typeis
+                                incorrect</span>
+                </div>
+                <br>
+                <div><span>image: </span><input type="text" name="image" formControlName="image" /><span appErrorRed
+                                *ngIf="image && image.invalid && image.touched">image is incorrect</span></div>
+
+                <br>
+                <div><span>Name:</span> <input type="text" name="name" formControlName="name" /><span appErrorRed
+                                *ngIf="name && name.invalid && name.touched">Name is incorrect</span></div>
+
+                <br>
+                <div><span>Content: </span><input type="text" name="content" formControlName="content" /><span
+                                appErrorRed *ngIf="content && content.invalid && content.touched">Content is
+                                incorrect</span></div>
+
+                <br>
+
+                <button [disabled]="mealsForm.invalid">Sign Up</button>
+        </form>
+</div>

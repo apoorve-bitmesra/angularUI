@@ -1,0 +1,16 @@
+.li-right {
+    display: inline-block;
+    list-style-type: none;
+}
+.padded {
+    color: white;
+}
+.nav{
+    padding-left: 40%;
+}
+li {
+    padding-right: 8%;
+}
+ul {
+    min-width: 800px;;
+}

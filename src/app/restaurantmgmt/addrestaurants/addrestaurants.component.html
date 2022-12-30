@@ -1,0 +1,48 @@
+<div class="magin">
+    <h1> Add a new restaurant</h1>
+    <br>
+    <form [formGroup]="restaurantForm" (ngSubmit)="addRestaurant()">
+        <div><span>Name: </span><input type="text" name="name" formControlName="name" /><span appErrorRed
+                *ngIf="name && name.invalid && name.touched ">Name is incorrect</span></div>
+
+        <br>
+        <div><span>Description:</span><input type="text" name="description" formControlName="description" /><span
+                appErrorRed *ngIf="description && description.invalid && description.touched">Description is
+                incorrect</span></div>
+
+        <br>
+        <div><span>Address: </span><input type="text" name="address" formControlName="address" /><span appErrorRed
+                *ngIf="address && address.invalid && address.touched">Address is incorrect</span></div>
+
+        <br>
+        <div><span>Location: </span><input type="text" name="location" formControlName="location" /><span appErrorRed
+                *ngIf="location && location.invalid && location.touched">Location is incorrect</span></div>
+
+        <br>
+        <div><span>image: </span><input type="text" name="image" formControlName="image" /><span appErrorRed
+                *ngIf="image && image.invalid && image.touched">Image is incorrect</span></div>
+
+        <br>
+        <div><span>cuisine:</span> <input type="text" name="cuisine" formControlName="cuisine" /><span appErrorRed
+                *ngIf="cuisine && cuisine.invalid && cuisine.touched">Cuisine is incorrect</span></div>
+
+        <br>
+        <div><span>min_price:</span><input type="text" name="min_price" formControlName="min_price" /><span appErrorRed
+                *ngIf="min_price && min_price.invalid && min_price.touched">Minimum price is incorrect</span></div>
+
+        <br>
+        <div><span>contact: </span><input type="text" name="contact" formControlName="contact" /><span appErrorRed
+                *ngIf="contact && contact.invalid && contact.touched">Contact is incorrect</span></div>
+
+        <br>
+        <div><span>locality: </span><input type="text" name="locality" formControlName="locality" /><span appErrorRed
+                *ngIf="locality && locality.invalid && locality.touched">Locality is incorrect</span></div>
+
+        <br>
+        <div><span>city: </span><input type="text" name="city" formControlName="city" /><span appErrorRed
+                *ngIf="city && city.invalid && city.touched">Contact is incorrect</span></div>
+
+        <br>
+        <button [disabled]="restaurantForm.invalid">Sign Up</button>
+    </form>
+</div>
